@@ -21,16 +21,6 @@ body {
     overflow-x: hidden;
     height: 100%;
 }
-/*
-có 1 thang margin -top
-ak
-nhưng nó có màu margin đâu nhỉ
-là sao
-cái màu hồng đó
-đâu, màu nào
-ak r
-nhìn lộn
-
-tohkank nha
-ok ok
-*/
+html {
+    height: 100%;
+}
