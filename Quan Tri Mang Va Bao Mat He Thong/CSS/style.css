@@ -283,7 +283,7 @@
         min-height: 1075px;
     }
     .body {
-        top: 143%;
+        top: 154%;
     }
 }
 @media only screen and (max-width: 778px) {
@@ -298,7 +298,10 @@
         min-height: 1070px;
     }
     .paragraph-introduce::after {
-        top: -5%;
+        top: -4%;
+    }
+    .body {
+        top: 146%;
     }
 }
 @media only screen and (max-width:774px) {
@@ -587,9 +590,11 @@
 }
 .course-text {
     min-height: 150px;
+    text-align: justify;
 }
 .course-content  > img {
     width: 50%;
+    object-fit: cover;
 }
 @media only screen and (max-width:1158px) {
     .course {
