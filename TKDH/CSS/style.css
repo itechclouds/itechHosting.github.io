@@ -139,8 +139,7 @@
 .body {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 75%;
+    position: relative;
 }
 /* paragraph-introduce */
 
@@ -150,16 +149,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background-image: url(../Image/Tuan\ 1\,3-1.png);
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    position: relative;
     text-align: justify !important;
     z-index: 5;
-    padding: 4rem 0;
+    padding: 0.3rem 0;
     /* overflow: hidden; */
+    position: relative;
+}
+.paragraph-introduce::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../Image/Tuan\ 1\,3-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    top: -26%;
 }
 .paragraph-content {
     width: 40%;
@@ -167,9 +174,14 @@
     font-weight: 650;
     font-size: 1.1rem;
     margin-right: 1.5rem;
+    min-height: 410px;
+    position: relative;
+    z-index: 3;
 }
 .image-paragraph {
     width: 40%;
+    position: relative;
+    z-index: 3;
 }
 .image-paragraph > img {
     object-fit: cover;
@@ -225,6 +237,9 @@
         height: 100%;
         padding: 8rem 0 4rem !important;
         justify-content: flex-end;
+        align-items: center;
+        padding: 0 0 4rem !important;
+        position: relative;
     }
     .paragraph-content {
         width: 60%;
@@ -235,13 +250,34 @@
     }
     .body {
         top: 100%;
-        top: 77%;
+        top: 91%;
+        position: absolute;
     }
-
+    .paragraph-introduce::after {
+        top: -7%;
+        min-height: 1050px;
+    }
 }
 @media only screen and (min-width:1200) {
     .paragraph-introduce {
         height: 100vh;
+    }
+}
+@media only screen and (min-width:768px) {
+    .paragraph-introduce::after {
+    min-height: 935px;
+    }
+}
+@media only screen and (max-width: 778px) {
+    .paragraph-introduce::after {
+        top: -12%;
+        min-height: 1120px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .paragraph-introduce::after {
+        top: -6%;
+        min-height: 1037px;
     }
 }
 @media only screen and (max-width:774px) {
@@ -256,11 +292,29 @@
     .banner_head {
         justify-content: center;
     }
+    .paragraph-introduce  {
+        padding: 2rem 0.5rem !important;
+        min-height: 1150px;
+    }
+    .image-paragraph {
+        padding-top: 4rem;
+    }
+    .body {
+        top: 82%;
+    }
 }
 @media only screen and (max-width:653px) {
     .title-banner {
         font-size: 1.3rem;
     }
+}
+@media only screen and (max-width: 643px) {
+    .paragraph-introduce  {
+        flex-wrap: nowrap;
+        min-height: 1100px;
+            
+    }
+    
 }
 @media only screen and (max-width:627px) {
     .paragraph-content {
@@ -291,11 +345,8 @@
     }
 }
 @media only screen and (max-width:492px) {
-    .paragraph-introduce {
-        height: 1150px;
-    }
     .title-color {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 } 
 @media only screen and (max-width:418px) {
@@ -305,6 +356,9 @@
     }
     .image-paragraph > img {
         width: 100%;
+    }
+    .paragraph-introduce::after {
+        min-height: 1230px;
     }
 
 }
@@ -380,7 +434,8 @@
 .slide-body {
     width: 100%;
     margin: 2rem 0;
- 
+    display: flex;
+    flex-wrap: wrap;
 
 }
 .slide-body-content {
@@ -414,6 +469,11 @@
 @media only screen and (max-width:768px) {
     .slide-item {
         width: calc(100%/2);
+    }
+}
+@media only screen and (max-width: 533px) {
+    .joiner .name-body {
+        font-size: 1.5rem;
     }
 }
 @media only screen and (max-width:490px) {
